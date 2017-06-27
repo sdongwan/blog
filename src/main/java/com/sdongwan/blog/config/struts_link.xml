@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="link" namespace="/link" extends="struts-default">
+        <action name="showLinks" class="com.sdongwan.blog.action.LinkAction" method="showLinks">
+            <result name="success">/WEB-INF/link/links.jsp</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="showLink" class="com.sdongwan.blog.action.LinkAction" method="showLink">
+            <result name="success">/WEB-INF/link/uplink.jsp</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="delLink" class="com.sdongwan.blog.action.LinkAction" method="deleteLink">
+            <result name="success" type="chain">showLinks</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="upLink" class="com.sdongwan.blog.action.LinkAction" method="updateLink">
+            <result name="success" type="chain">showLinks</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="addLink" class="com.sdongwan.blog.action.LinkAction" method="addLink">
+            <result name="success" type="chain">showLinks</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+
+        <action name="upMyLink">
+            <result>/WEB-INF/link/uplink.jsp</result>
+        </action>
+    </package>
+</struts>

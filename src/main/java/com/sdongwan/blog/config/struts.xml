@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+    <constant name="struts.action.extension" value="action,jsp"/>
+
+    <package name="admin" namespace="/admin" extends="struts-default" strict-method-invocation="false">
+        <action name="adminLogin" class="com.sdongwan.blog.action.AdminAction" method="adminLogin">
+            <result name="success">/WEB-INF/admin/index.jsp</result>
+            <result name="error">/WEB-INF/adminLogin.jsp</result>
+        </action>
+
+        <action name="left">
+            <result>/WEB-INF/admin/left.jsp</result>
+        </action>
+        <action name="leftFrame">
+            <result>/WEB-INF/admin/leftFrame.jsp</result>
+        </action>
+        <action name="top">
+            <result>/WEB-INF/admin/top.jsp</result>
+        </action>
+        <action name="main">
+            <result>/WEB-INF/admin/main.jsp</result>
+        </action>
+        <action name="out">
+            <result>/WEB-INF/admin/out.jsp</result>
+        </action>
+    </package>
+
+    <package name="default" extends="struts-default">
+        <default-action-ref name="notFound"/>
+        <action name="notFound">
+            <result>/WEB-INF/404.jsp</result>
+        </action>
+    </package>
+
+    <include file="com/sdongwan/blog/config/struts_article.xml"/>
+    <include file="com/sdongwan/blog/config/struts_link.xml"/>
+    <include file="com/sdongwan/blog/config/struts_notice.xml"/>
+    <include file="com/sdongwan/blog/config/struts_pic.xml"/>
+    <include file="com/sdongwan/blog/config/struts_discuss.xml"/>
+    <include file="com/sdongwan/blog/config/struts_visitor.xml"/>
+</struts>

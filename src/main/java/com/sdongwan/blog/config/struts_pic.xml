@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="pic" namespace="/pic" extends="struts-default">
+        <!-- 图片类型 -->
+        <action name="showPicTypes" class="com.sdongwan.blog.action.PicTypeAction" method="showPicTypes">
+            <result name="success">/WEB-INF/pic/picType.jsp</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+
+        <action name="upPicType" class="com.sdongwan.blog.action.PicTypeAction" method="updatePicType">
+            <result name="success" type="chain">showPicTypes</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+
+        <action name="addPicType" class="com.sdongwan.blog.action.PicTypeAction" method="addPicType">
+            <result name="success" type="chain">showPicTypes</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="delPicType" class="com.sdongwan.blog.action.PicTypeAction" method="deletePicType">
+            <result name="success" type="chain">showPicTypes</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+
+        <!-- 图片-->
+
+        <action name="addPic" class="com.sdongwan.blog.action.PicAction" method="addPic">
+            <result name="success" type="chain">showPics</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="upPic" class="com.sdongwan.blog.action.PicAction" method="updatePic">
+            <result name="success" type="chain">showPics</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="showPic" class="com.sdongwan.blog.action.PicAction" method="showPic">
+            <result name="success">/WEB-INF/pic/pic.jsp</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="delPic" class="com.sdongwan.blog.action.PicAction" method="deletePic">
+            <result name="success" type="chain">showPics</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="showPics" class="com.sdongwan.blog.action.PicAction" method="showPics">
+            <result name="success">/WEB-INF/pic/pics.jsp</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+
+        <action name="UpPicCount" class="com.sdongwan.blog.action.PicAction" method="addPicCount">
+            <result name="success" type="redirect">showPic.action?picId=${picBean.picId}</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="showSortPics" class="com.sdongwan.blog.action.PicAction" method="showPicByType">
+            <result name="success">/WEB-INF/pic/sort.jsp</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+
+        <action name="addPhoto">
+            <result>/WEB-INF/pic/addPic.jsp</result>
+        </action>
+        <action name="upPhotoType">
+            <result>/WEB-INF/pic/upPicType.jsp</result>
+        </action>
+
+    </package>
+
+
+</struts>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="notice" namespace="/notice" extends="struts-default">
+        <action name="showNotices" class="com.sdongwan.blog.action.NoticeAction" method="showNotices">
+            <result name="success">/WEB-INF/notice/notices.jsp</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="showNotice" class="com.sdongwan.blog.action.NoticeAction" method="showNotice">
+            <result name="success">/WEB-INF/notice/notice.jsp</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="delNotice" class="com.sdongwan.blog.action.NoticeAction" method="deleteNotice">
+            <result name="success" type="chain">showNotices</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="upNotice" class="com.sdongwan.blog.action.NoticeAction" method="updateNotice">
+            <result name="success" type="chain">showNotices</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="addNotice" class="com.sdongwan.blog.action.NoticeAction" method="addNotice">
+            <result name="success" type="chain">showNotices</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+        <action name="toUpNotice" class="com.sdongwan.blog.action.NoticeAction" method="toUpNotice">
+            <result name="success">/WEB-INF/notice/upNotice.jsp</result>
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+
+        <action name="addMyNotice">
+            <result>/WEB-INF/notice/addNotice.jsp</result>
+        </action>
+        <action name="upMyNotice">
+            <result>/WEB-INF/notice/upNotice.jsp</result>
+        </action>
+    </package>
+
+
+</struts>
