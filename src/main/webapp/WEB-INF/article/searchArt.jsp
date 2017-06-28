@@ -21,7 +21,7 @@
     <title>Title</title>
 </head>
 <body>
-<form name="formSearch" method="post" action="" id="formSearch">
+<form name="formSearch" method="post" action="#" id="formSearch">
     文章名字
     <input type="text" name="searchArt.articleName" id="articleName">
 

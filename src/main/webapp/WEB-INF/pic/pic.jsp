@@ -5,7 +5,7 @@
   Time: 18:57
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
@@ -17,21 +17,21 @@
     <title>Title</title>
 </head>
 <body>
-<div>当前文件为：${picDto.picName }<br>描述：${picDto.picDes }<br>共有${picDto.picCount }人喜欢</div>
+<div>当前文件为：${picBean.picName }<br>描述：${picBean.picDes }<br>共有${picBean.picCount }人喜欢</div>
 <div>
-    <form action="#" name = "form1" id = "form1" method="post">
-        <input type = "hidden" value ="${picDto.picName }" name = "addPicCount.picName">
-        <input type = "hidden" value ="${picDto.picId }" name = "addPicCount.picId">
-        <input type = "hidden" value ="${picDto.picTypeId }" name = "addPicCount.picTypeId">
-        <input type = "hidden" value ="${picDto.picPath }" name = "addPicCount.picPath">
-        <input type = "hidden" value ="${picDto.picDes }" name = "addPicCount.picDes">
-        <input type = "hidden" value ="${picDto.picCount }" name = "addPicCount.picCount">
-        <input type = "hidden" value ="${picDto.picTime }" name = "addPicCount.picTime">
-        <input type = "submit" value="喜欢" >
+    <form action="/pic/UpPicCount.action" name="form1" id="form1" method="post">
+        <input type="hidden" value="${picBean.picName }" name="picBean.picName">
+        <input type="hidden" value="${picBean.picId }" name="picBean.picId">
+        <input type="hidden" value="${picBean.picTypeId }" name="picBean.picTypeId">
+        <input type="hidden" value="${picBean.picPath }" name="picBean.picPath">
+        <input type="hidden" value="${picBean.picDes }" name="picBean.picDes">
+        <input type="hidden" value="${picBean.picCount }" name="picBean.picCount">
+        <input type="hidden" value="${picBean.picTime }" name="picBean.picTime">
+        <input type="submit" value="喜欢">
     </form>
 
-    <img src="<%=imgPath%>/${picDto.picPath}" width="700" height="300"/>
-    <div align ="left"><input type="button" name="Submit" value="返回" onclick="javascript:window.history.back();"/>
+    <img src="/upload/${picBean.picName}" width="700" height="300"/>
+    <div align="left"><input type="button" name="Submit" value="返回" onclick="javascript:window.history.back();"/>
         <input type="button" name="Submit" value="关闭" onclick="javascript:window.close();"/></div>
 
 </div>

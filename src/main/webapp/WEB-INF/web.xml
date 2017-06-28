@@ -4,7 +4,7 @@
 <web-app>
     <display-name>Archetype Created Web Application</display-name>
     <welcome-file-list>
-        <welcome-file>WEB-INF/adminLogin.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
 
@@ -19,8 +19,12 @@
     </filter>
     <filter-mapping>
         <filter-name>struts2</filter-name>
-        <url-pattern>/*</url-pattern>
-
+        <url-pattern>/admin/*</url-pattern>
+        <url-pattern>/article/*</url-pattern>
+        <url-pattern>/link/*</url-pattern>
+        <url-pattern>/notice/*</url-pattern>
+        <url-pattern>/pic/*</url-pattern>
+        <url-pattern>/visitor/*</url-pattern>
     </filter-mapping>
 
 

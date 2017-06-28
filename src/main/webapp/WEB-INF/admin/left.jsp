@@ -166,7 +166,7 @@
                                 <table width="156" border="0" cellspacing="1" cellpadding="1" align="center">
                                     <tr>
                                         <td height=23 class="amrow">
-                                            <a href="" target="right">密码修改</a></td>
+                                            <a href="#" target="right">密码修改</a></td>
                                     </tr>
                                 </table>
                             </div>

@@ -140,7 +140,6 @@ public class PicDaoImpl implements PicDao {
             picBean.setPicTime(resultSet.getDate(5));
             picBean.setPicDes(resultSet.getString(6));
             picBean.setPicCount(resultSet.getInt(7));
-
         }
 
         DBFactoryUtil.closeConnection(resultSet, preparedStatement, null, connection);
@@ -240,6 +239,7 @@ public class PicDaoImpl implements PicDao {
         preparedStatement.setDate(4, picBean.getPicTime());
         preparedStatement.setString(5, picBean.getPicDes());
         preparedStatement.setInt(6, picBean.getPicCount());
+        preparedStatement.setInt(7, picBean.getPicId());
         int result = preparedStatement.executeUpdate();
 
         DBFactoryUtil.closeConnection(resultSet, preparedStatement, null, connection);

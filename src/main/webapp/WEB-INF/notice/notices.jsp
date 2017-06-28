@@ -38,7 +38,7 @@
             <td>${nDtoT.noticeName}</td>
             <td>${nDtoT.notice}</td>
             <td>${nDtoT.noticeTime}</td>
-            <td><a href="notice/upMyNotice.action?noticeId=${nDtoT.noticeId}">修改</a>
+            <td><a href="notice/toUpNotice.action?noticeId=${nDtoT.noticeId}">修改</a>
                 |<a href="notice/showNotice.action?noticeId=${nDtoT.noticeId}">查看详细</a>
                 |<a href="notice/delNotice.action?noticeId=${nDtoT.noticeId}" onclick="return confirm('是否确认删除？')">删除</a>
             </td>

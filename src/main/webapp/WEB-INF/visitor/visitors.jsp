@@ -40,9 +40,11 @@
             <td>${visitDto.visitorEmail}</td>
             <td><a href="visitor/showVisitor.action?visitorId=${visitDto.visitorId}"><%= disDao.getCount(visitorId)%>
             </a></td>
+
             <td><a href="visitor/showVisitor.action?visitorId=${visitDto.visitorId}">查看详细</a>&nbsp;&nbsp;
-                <a href="visitor/delVisitor.action?visitorId=${visitDto.visitorId}" onclick="confirm('是否确认删除？')">删除</a>
+                <a href="visitor/delVisitor.action?visitorId=${visitDto.visitorId}" onclick="return confirm('是否确认删除？')">删除</a>
             </td>
+
         </tr>
     </s:iterator>
 </table>

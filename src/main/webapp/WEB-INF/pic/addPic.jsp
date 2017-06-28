@@ -23,7 +23,7 @@
 <body>
 <form action="pic/addPic.action" enctype="multipart/form-data" method="post">
     <p align="center"><font>只能上传图片文件，且大小不超过2M</font></p>
-    <p>选择图片：<input type="file" name="image"></p>
+    <p>选择图片：<input type="file" name="photo"></p>
     <p>图片类型：
         <%
             List<PicTypeBean> ptLt = new ArrayList<PicTypeBean>();
@@ -31,7 +31,7 @@
             ptLt = ptDao.selectAll();
         %>
 
-        <select id="picType" name="picBean.picType">
+        <select id="picTypeId" name="picBean.picTypeId">
             <%for (PicTypeBean ptDto : ptLt) {%>
             <option value="<%=ptDto.getPicTypeId()%>"><%=ptDto.getPicTypeName()%>
             </option>

@@ -7,53 +7,53 @@
         <!-- 文章类型 -->
         <action name="addArtType" class="com.sdongwan.blog.action.ArticleTypeAction" method="addAticleType">
             <result name="success" type="chain">showArtTypes</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
 
 
         <action name="showArtTypes" class="com.sdongwan.blog.action.ArticleTypeAction" method="showArticleTypes">
             <result name="success">/WEB-INF/article/listArtType.jsp</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
 
         <action name="upArtType" class="com.sdongwan.blog.action.ArticleTypeAction" method="updateAtricleType">
             <result name="success" type="chain">showArtTypes</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
 
         <action name="delArtType" class="com.sdongwan.blog.action.ArticleTypeAction" method="deleteArticleType">
             <result name="success" type="chain">showArtTypes</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
         <!-- 文章 -->
         <action name="addArt" class="com.sdongwan.blog.action.ArticleAction" method="addArticle">
             <result name="success" type="chain">showArts</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
         <action name="delArt" class="com.sdongwan.blog.action.ArticleAction" method="deleteArticle">
             <result name="success" type="chain">showArts</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
         <action name="upArt" class="com.sdongwan.blog.action.ArticleAction" method="updateArticle">
             <result name="success" type="chain">showArts</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
         <action name="showArts" class="com.sdongwan.blog.action.ArticleAction" method="showAllArticles">
             <result name="success">/WEB-INF/article/arts.jsp</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
         <action name="showArt" class="com.sdongwan.blog.action.ArticleAction" method="showArticle">
             <result name="success">/WEB-INF/article/showArt.jsp</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
 
         <action name="showArtByType" class="com.sdongwan.blog.action.ArticleAction" method="showArticleByType">
             <result name="success">/WEB-INF/article/articleType.jsp</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
         <action name="searchArt" class="com.sdongwan.blog.action.ArticleAction" method="searchArticle">
             <result name="success">/WEB-INF/article/search.jsp</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
 
 

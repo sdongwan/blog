@@ -36,7 +36,7 @@
             <tr>
                 <td>${artTypeBeanItem.artTypeName}</td>
                 <td><a href="<%=basePath%>article/delArtType.action?articleTypeId=${artTypeBeanItem.artTypeId}"
-                       onclick="confirm('是否确认删除？')">删除</a></td>
+                       onclick="return confirm('是否确认删除？')">删除</a></td>
                 <td><a href="<%=basePath%>article/upMyArtType.action?articleTypeId=${artTypeBeanItem.artTypeId}">编辑</a>
                 </td>
             </tr>

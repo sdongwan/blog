@@ -90,20 +90,29 @@ public class NoticeAction extends ActionSupport {
 
     public String updateNotice() throws SQLException, ClassNotFoundException {
         int result = -1;
-        NoticeBean noticeBean1 = noticeDao.selectByName(noticeBean.getNoticeName());
-        if (noticeBean1 != null) {
-            if (noticeBean1.getNoticeId() != noticeBean.getNoticeId()) {
-                return ERROR;
-            }
-        }
-
         noticeBean.setNoticeTime(new Date(System.currentTimeMillis()));
-        result = noticeDao.insert(noticeBean);
+        result = noticeDao.update(noticeBean);
         if (result > 0) {
             return SUCCESS;
         } else {
             return ERROR;
         }
+
+//        int result = -1;
+//        NoticeBean noticeBean1 = noticeDao.selectByName(noticeBean.getNoticeName());
+//        if (noticeBean1 != null) {
+//            if (noticeBean1.getNoticeId() != noticeBean.getNoticeId()) {
+//                return ERROR;
+//            }
+//        }
+//
+//        noticeBean.setNoticeTime(new Date(System.currentTimeMillis()));
+//        result = noticeDao.insert(noticeBean);
+//        if (result > 0) {
+//            return SUCCESS;
+//        } else {
+//            return ERROR;
+//        }
     }
 
     public String showNotices() throws SQLException, ClassNotFoundException {

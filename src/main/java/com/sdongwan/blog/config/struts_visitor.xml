@@ -6,23 +6,23 @@
     <package name="visitor" namespace="/visitor" extends="struts-default">
         <action name="showVisitors" class="com.sdongwan.blog.action.VisitorAction" method="showVisitors">
             <result name="success">/WEB-INF/visitor/visitors.jsp</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
         <action name="showVisitor" class="com.sdongwan.blog.action.VisitorAction" method="showVisitor">
             <result name="success">/WEB-INF/visitor/visitor.jsp</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
         <action name="addVisitor" class="com.sdongwan.blog.action.VisitorAction" method="addVisitor">
             <result name="success" type="chain">showVisitors</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
         <action name="delVisitor" class="com.sdongwan.blog.action.VisitorAction" method="deleteVisitor">
             <result name="success" type="chain">showVisitors</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
         <action name="upVisitor" class="com.sdongwan.blog.action.VisitorAction" method="updateVisitor">
             <result name="success" type="chain">showVisitors</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
 
 

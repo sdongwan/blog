@@ -15,15 +15,15 @@
         </action> -->
         <action name="addDiscuss" class="com.sdongwan.blog.action.DiscussAction" method="addDiscuss">
             <result name="success" type="redirect">/article/showArt.action?articleId=${discussBean.articleId}</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
         <action name="delDiscuss" class="com.sdongwan.blog.action.DiscussAction" method="deleteDiscuss">
-            <result name="success">/WEB-INF/discuss.jsp?articleId=${discussBean.articleId}</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="success">/discuss.jsp?articleId=${discussBean.articleId}</result>
+            <result name="error">/error.jsp</result>
         </action>
         <action name="upDiscuss" class="com.sdongwan.blog.action.DiscussAction" method="updateDiscuss">
-            <result name="success">/WEB-INF/discuss.jsp?articleId=${discussBean.articleId}</result>
-            <result name="error">/WEB-INF/error.jsp</result>
+            <result name="success">/discuss.jsp?articleId=${discussBean.articleId}</result>
+            <result name="error">/error.jsp</result>
         </action>
 
     </package>

@@ -9,7 +9,7 @@
     <package name="admin" namespace="/admin" extends="struts-default" strict-method-invocation="false">
         <action name="adminLogin" class="com.sdongwan.blog.action.AdminAction" method="adminLogin">
             <result name="success">/WEB-INF/admin/index.jsp</result>
-            <result name="error">/WEB-INF/adminLogin.jsp</result>
+            <result name="error">/adminLogin.jsp</result>
         </action>
 
         <action name="left">
@@ -32,7 +32,7 @@
     <package name="default" extends="struts-default">
         <default-action-ref name="notFound"/>
         <action name="notFound">
-            <result>/WEB-INF/404.jsp</result>
+            <result>/404.jsp</result>
         </action>
     </package>
 

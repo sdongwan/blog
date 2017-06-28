@@ -58,7 +58,7 @@
             </td>
             <td><a href="<%=basePath%>article/upMyArt.action?articleId=${articleDto.articleId}">编辑</a> |
                 <a href=<%=basePath%>article/delArt.action?articleId=${articleDto.articleId}" onclick="return confirm('是否确认删除？')">删除</a> |
-                <a href="<%=basePath%>article/showArt.action?articleId=${articleDto.articleId}">查看文章</a>
+                <a href="<%=basePath%>article/showArt.action?articleId=${articleDto.articleId}" >查看文章</a>
             </td>
         </tr>
     </s:iterator>

@@ -28,7 +28,7 @@ public class NoticeDaoImpl implements NoticeDao {
             noticeBean = new NoticeBean();
             noticeBean.setNoticeId(resultSet.getInt(1));
             noticeBean.setNotice(resultSet.getString(2));
-            noticeBean.setNotice(resultSet.getString(3));
+            noticeBean.setNoticeName(resultSet.getString(3));
             noticeBean.setNoticeTime(resultSet.getDate(4));
             noticeBeans.add(noticeBean);
         }
@@ -48,7 +48,7 @@ public class NoticeDaoImpl implements NoticeDao {
             noticeBean = new NoticeBean();
             noticeBean.setNoticeId(resultSet.getInt(1));
             noticeBean.setNotice(resultSet.getString(2));
-            noticeBean.setNotice(resultSet.getString(3));
+            noticeBean.setNoticeName(resultSet.getString(3));
             noticeBean.setNoticeTime(resultSet.getDate(4));
         }
 
@@ -66,7 +66,7 @@ public class NoticeDaoImpl implements NoticeDao {
             noticeBean = new NoticeBean();
             noticeBean.setNoticeId(resultSet.getInt(1));
             noticeBean.setNotice(resultSet.getString(2));
-            noticeBean.setNotice(resultSet.getString(3));
+            noticeBean.setNoticeName(resultSet.getString(3));
             noticeBean.setNoticeTime(resultSet.getDate(4));
         }
 
@@ -83,7 +83,7 @@ public class NoticeDaoImpl implements NoticeDao {
             noticeBean = new NoticeBean();
             noticeBean.setNoticeId(resultSet.getInt(1));
             noticeBean.setNotice(resultSet.getString(2));
-            noticeBean.setNotice(resultSet.getString(3));
+            noticeBean.setNoticeName(resultSet.getString(3));
             noticeBean.setNoticeTime(resultSet.getDate(4));
         }
 

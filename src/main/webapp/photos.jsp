@@ -1,17 +1,20 @@
-<%@ page language="java" pageEncoding="UTF-8" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: Administrator
+  Date: 2017/6/26
+  Time: 19:30
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+
 %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>我的博客</title>
-    <meta name="keywords" content=""/>
-    <meta name="description" content=""/>
-
+    <base href="<%=basePath%>">
+    <title>Title</title>
 </head>
 <body>
 <!-- start header -->
@@ -21,8 +24,7 @@
             <jsp:include page="head.jsp" flush="true"/>
             <!-- start page -->
             <div id="page">
-                <jsp:include page="/WEB-INF/article/searchArt.jsp" flush="true"/>
-                <jsp:include page="Article.jsp" flush="true"/>
+                <jsp:include page="photo.jsp" flush="true"/>
                 <jsp:include page="right.jsp" flush="true"/>
                 <div id="bottom" style="clear: both;"></div>
             </div><!-- end page -->
@@ -34,4 +36,3 @@
 <!-- end footer -->
 </body>
 </html>
-  
